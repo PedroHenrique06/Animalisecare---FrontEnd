@@ -11,9 +11,11 @@ body {
   align-items: center;
   justify-content: space-between;
 
-  width: 100%;
+  width: auto;
   height: 103px;
   padding: 20px 44px;
+  margin-left: 50px;
+  margin-right: 50px;
 
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -89,6 +91,10 @@ body {
 
 .main-title span {
   font-size: 36px;
+}
+
+.main-title span, .most-liked-title span {
+  border-bottom: #ffbbc1 3px solid;
 }
 
 .most-liked-title {

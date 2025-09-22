@@ -26,3 +26,34 @@ document.addEventListener("click", (e) => {
         orderMenu.style.display = "none";
     }
 });
+
+// Funcionalidade avançar e voltar do carrossel
+document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.getElementById("carousel");
+    const prevButton = document.getElementById("prev-button");
+    const nextButton = document.getElementById("next-button");
+
+    function getCardWidth() {
+        const card = carousel.querySelector(".card-container");
+        if (!card) return 0;
+        const style = getComputedStyle(card);
+        const marginRight = parseFloat(style.marginRight) || 0;
+        return card.offsetWidth + marginRight;
+    }
+
+    let step = getCardWidth();
+
+    window.addEventListener("resize", () => {
+        step = getCardWidth();
+    }); 
+
+    // Avançar 
+    nextButton.addEventListener("click", () => {
+        carousel.scrollBy({ left: step, behavior: "smooth" });
+    });
+
+    // Voltar
+    prevButton.addEventListener("click", () => {
+        carousel.scrollBy({ left: -step, behavior: "smooth" });
+    });
+});

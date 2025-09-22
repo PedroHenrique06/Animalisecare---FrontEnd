@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="blog-page.css">
 </head>
 <body>
-    <nav class="navbar">
+  <!-- Barra de navegação -->
+  <nav class="navbar">
     <div class="left-section">
       <!-- Logo -->
       <div class="logo">
@@ -26,9 +27,10 @@
     <!-- Botão à direita -->
     <button class="btn">Marcar horários</button>
   </nav>
+  <!-- Fim da barra de navegação -->
 
-  <!-- Envolopamento de todo o conteúdo do blog (cards/notícias/sugestões) -->
-  <div class="content">
+  <!-- Sessão de conteúdo do blog (cards/notícias/sugestões) -->
+  <main class="content">
     <div class="main-title">
       <span>
         Blog
@@ -42,7 +44,7 @@
     </div>
 
     <!-- Sessão dos post mais curtidos -->
-    <div class="most-liked-posts">
+    <section class="most-liked-posts">
       <!-- Envelopador do Carrossel -->
       <div class="carousel-wrapper">
         <div id="prev-button" class="prev-button"><img src="images/prev-icon.png" alt=""></div>
@@ -229,7 +231,8 @@
         </div>
         <!-- Fim do carrossel -->
         <div id="next-button" class="next-button"><img src="images/next-icon.png" alt=""></div>
-      </div>
+      </section>
+    <!-- Fim da sessão dos post mais curtidos -->
 
     <!-- Botões de filtragem e ordenação -->
     <div class="filter-order-container">
@@ -281,9 +284,10 @@
         </div>
       </div>
     </div>
+    <!-- Fim dos botões de filtragem e ordenação -->
 
     <!-- Sessão de notícias em card horizontais -->
-    <div class="news-container">
+    <section class="news-container">
       <!-- Card com as informações de notícias/sugestões -->
       <div class="news-card-container">
         <div class="image-container">
@@ -314,45 +318,60 @@
             </span>
           </div>
         </div>
-      </div>   
-    </div>
+      </div>
+      </div>
 
-    <!-- Card com as informações de notícias/sugestões -->
-    <div class="news-card-container">
-      <div class="image-container">
-        <img class="news-img" src="images/doctor.jpeg" alt="">
-      </div>
-      <div class="news-card-content">
-      <span class="news-title">
-        Cuide do seu pet hoje
-      </span>
-      <div class="description-container">
-        <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit aliquid vitae facere excepturi et totam omnis, ipsum impedit hic explicabo sed amet optio ratione nobis mollitia at illum minima consequatur.</span>
-      </div>
-      <div class="author-container">
-        <span class="author">
-          Por <strong>Dra. Annelise Figueiredo</strong>
+      <!-- Card com as informações de notícias/sugestões -->
+      <div class="news-card-container">
+        <div class="image-container">
+          <img class="news-img" src="images/doctor.jpeg" alt="">
+        </div>
+        <div class="news-card-content">
+        <span class="news-title">
+          Cuide do seu pet hoje
         </span>
-      </div>
-      <!-- Informaçẽos de tag e data de publicação -->
-      <div class="card-footer">
-        <div class="tag">
-          <span>
-            Notícia
+        <div class="description-container">
+          <span class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit aliquid vitae facere excepturi et totam omnis, ipsum impedit hic explicabo sed amet optio ratione nobis mollitia at illum minima consequatur.</span>
+        </div>
+        <div class="author-container">
+          <span class="author">
+            Por <strong>Dra. Annelise Figueiredo</strong>
           </span>
         </div>
-        <div class="date">
-          <span>
-            08/09/2025
-          </span>
+        <!-- Informaçẽos de tag e data de publicação -->
+        <div class="card-footer">
+          <div class="tag">
+            <span>
+              Notícia
+            </span>
+          </div>
+          <div class="date">
+            <span>
+              08/09/2025
+            </span>
+          </div>
         </div>
       </div>
-    </div>   
-
+      </div>
+    </section>
+    <!-- Fim da sessão de notícias em card horizontais --> 
+    
+    <!-- Paginação -->
+    <div class="pagination">
+      <a href="">1</a>
+      <a href="">2</a>
+      <a href="">3</a>
+      <a href="">4</a>
+      <a href="">5</a>
+      <a href="">Próxima</a>
     </div>
-  </div>
-</div>
-<footer class="footer">
+    <!-- Fim da paginação -->
+
+  </main>
+  <!-- Fim da sessão de conteúdo do blog -->
+
+  <!-- Rodapé -->
+  <footer class="footer">
   <div class="footer-container">
     <!-- Icone do site -->
      <div class="petshop-icon">
@@ -386,10 +405,12 @@
       </ul>
     </div>
   </div>
+    <!-- Direitos reservados -->
   <div class="copyright">
       <span>EJECT © Alguns Direitos Reservaods</span>
     </div>
-</footer>
+  </footer>
+<!-- Fim do rodapé -->
 
 </body>
 <script src="blog-page.js"></script>

@@ -448,15 +448,35 @@ body {
   justify-content: center;
   gap: 10px;
   margin-bottom: 50px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .pagination a {
   text-decoration: none;
   color: #333;
   font-size: 16px;
-  padding: 5px;
+  padding: 5px 8px;
   border-radius: 5px;
+}
+
+.page-link {
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.page-link:hover {
+  background-color: #FFBBC1;
+}
+
+.page-link.active {
+  background-color: #f8a8a8; /* cor de destaque */
+  color: #fff;
+  border-color: #f8a8a8;
+  font-weight: bold;
 }
 
 

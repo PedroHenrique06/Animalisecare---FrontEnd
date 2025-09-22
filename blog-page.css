@@ -116,19 +116,21 @@ body {
 .carousel-wrapper {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
-  max-width: 100%;
+  max-width: 80%;
   overflow: hidden;
 }
 
 .carousel {
   display: flex;
-  gap: 1rem;
-  overflow-x: auto;
+  flex-wrap: nowrap;
+  gap: 15px;
+  overflow: hidden;
   scroll-behavior: smooth;
-  flex: 1;                         /* ocupa o espaço restante */
-  padding: 10px;
-  max-width: 100%;
+  scroll-snap-type: x mandatory;
+  flex: 1;
+  padding: 10px 0px;
   box-sizing: border-box; 
 }
 
@@ -144,21 +146,19 @@ body {
 }
 
 .card-container {
-  flex: 0 0 100%;
+  flex: 0 0 calc((100% - 30px) / 3); /* 3 cards com gap (2 gaps de 15px = 40px) */
+  box-sizing: border-box;
   scroll-snap-align: start;
-  max-width: 340px;
   background-color: #FFFFFF;
-  width: 340px;
   text-align: center;
   border-radius: 20px;
-  margin-left: 20px;
   margin-bottom: 20px;
 }
 
 .image-container img {
   position: relative;
   height: 200px;
-  width: 340px;
+  max-width: auto;
   border-radius: 25px 0px 0px 25px;
 }
 

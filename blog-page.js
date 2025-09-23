@@ -70,3 +70,29 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// Funcionalidade para exibir o modal
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("news-modal");
+  const closeBtn = modal.querySelector(".close");
+  const cards = document.querySelectorAll(".news-card-container, .card-container");
+
+  // Ao clicar em um card → abre modal
+  cards.forEach(card => {
+    card.addEventListener("click", () => {
+      modal.style.display = "flex"; // aparece modal
+    });
+  });
+
+  // Fechar clicando no X
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+
+  // Fechar clicando fora do conteúdo
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});

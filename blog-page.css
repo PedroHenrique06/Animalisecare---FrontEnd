@@ -1,3 +1,5 @@
+
+/* Estilização base da página */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -5,6 +7,7 @@ body {
   font-size: 18px; /* aumenta o tamanho base da fonte */
 }
 
+/* Estilização da barra de navegação */
 .navbar {
   background-color: #ffe6e6;
   display: flex;
@@ -14,8 +17,8 @@ body {
   width: auto;
   height: 103px;
   padding: 20px 44px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 200px;
+  margin-right: 200px;
 
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -81,13 +84,15 @@ body {
   transform: translateY(-1px);
 }
 
+/* Estilização do conteúdo principal da página */
 .content{
   display: block;
-  margin: 0px 50px 0px 50px;
+  margin-left:200px;
+  margin-right: 200px;
 }
 
 .main-title {
-  margin: 30px 30px;
+  margin: 50px 100px 50px 100px;
 }
 
 .main-title span {
@@ -105,7 +110,7 @@ body {
   text-align: center;
 }
 
-/* Ajustes para aplicar a responsividade nos cards dessa sessão */
+/* Estilização da sessão de postagens mais curtidas */
 .most-liked-posts {
   display: flex;
   flex-wrap: wrap;
@@ -114,6 +119,7 @@ body {
   text-align: center;
 }
 
+/* Estilização do envelopador do carrossel */
 .carousel-wrapper {
   display: flex;
   align-items: center;
@@ -146,6 +152,8 @@ body {
   filter: brightness(90%);
 }
 
+
+/* Estilização dos cards de notícias/sugestões/cuidados */
 .card-container {
   flex: 0 0 calc((100% - 30px) / 3); /* 3 cards com gap (2 gaps de 15px = 40px) */
   box-sizing: border-box;
@@ -226,56 +234,7 @@ body {
   font-size: 18px;
 }
 
-/* Responsivo: tablets */
-@media (max-width: 900px) {
-  .card-container{
-    width: 100%;
-    height: auto;
-  }
-}
-
-/* Responsivo: celular */
-@media (max-width: 600px) {
-  .carousel-wrapper {
-    background-color: turquoise;
-    gap: 4px;
-  }
-
-  .card-container{
-    width: 90%;
-    height: auto;
-  }
-
-  .prev-button img, .next-button img {
-    width: 70px;
-    height: auto;
-  }
-}
-
-@media (max-width: 550px) {
-    .card-title {
-      font-size: 16px;
-    }
-
-    .description-container .description {
-      font-size: 14px;
-    }
-
-  .author-container .author {
-    font-size: 14px;
-  }
-
-  .card-footer .tag, .card-footer .date {
-    font-size: 14px;
-  }
-
-  .card-footer .tag {
-    padding: 2px 10px;
-  }
-
-
-}
-
+/* Estilização dos botões e menús de filtragem e ordenação */
 .filter-order-container {
   display: flex;
   justify-content: flex-end;
@@ -375,6 +334,7 @@ body {
   color: white
 }
 
+/* Estilização da sessão de notícias horizontais */
 .news-container {
   display: flex;
   flex-direction: column;
@@ -406,14 +366,12 @@ body {
   flex: 0 0 300px;
 }
 
-/* conteúdo ocupa o restante do espaço */
 .news-card-content {
-  flex: 1;
+  flex: 1; 
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* título em cima, rodapé embaixo */
 }
-
 
 .news-card-content {
   background-color: white;
@@ -429,6 +387,7 @@ body {
 
 .news-title {
   font-size: 24px;
+  margin-top: 10px;
   margin-left: 12px;
   margin-bottom: 0px;
 }
@@ -438,6 +397,21 @@ body {
   padding: 0px;
 }
 
+.news-card-content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.news-card-container .card-footer {
+  display: flex;
+  justify-content:flex-start;
+  gap: 30px;
+  padding: 10px 10px;
+  border-top: 1px solid #eee;
+  margin: 0px 5px;
+}
+
+/* Estilização da paginação das notícias */
 .content .pagination {
   display: flex;
   flex-direction: row;
@@ -479,7 +453,7 @@ body {
   font-weight: bold;
 }
 
-
+/* Estilização do footer/rodapé da pagina */
 footer {
   background-color: #ffe6e6;
   text-align: center;
@@ -494,18 +468,6 @@ footer {
   flex-direction: row;
   justify-content: center;
   gap: 150px;
-}
-
-
-/* RESPONSIVIDADE PROVISORIA */
-@media (max-width: 800px) {
-  .footer-container {
-    gap: 30px;
-  }
-
-  .footer-container .petshop-icon img {
-    margin-top: 0px;
-  }
 }
 
 .footer-container h3 {
@@ -545,6 +507,7 @@ footer {
   flex-direction: row;
   gap: 20px;
 }
+
 .copyright {
   text-align: center ;
   margin-top: 20px;
@@ -554,14 +517,12 @@ footer {
 }
 
 
-/* Modal - Preview das notícias */
+/* Estilização do modal/preview das notícias */
 .modal {
   display: none;
   position: fixed;
   z-index: 1000; /* acima de outros elementos */
   inset: 0;
-  /* width: 100%;
-  height: 100%; */
   backdrop-filter: blur(5px); /* desfoque de fundo */
   background-color: rgba(0, 0, 0, 0.5); /* fundo semi-transparente */
   justify-content: center;
@@ -570,12 +531,12 @@ footer {
 }
 
 .modal-content {
-  background-color: none;
-  border-radius: 20px;
+  background-color: white;
+  border-radius: 25px;
+  overflow: hidden;
   max-width: 700px;
   width: 100%;
   max-height: 90vh;
-
   display: flex;
   flex-direction: column;
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
@@ -586,9 +547,8 @@ footer {
   position: relative;
 }
 
-.modal-image img {
+.modal-img {
   width: 100%;
-  border-radius: 15px 15px 0px 0px;
   display: block;
 }
 
@@ -610,13 +570,13 @@ footer {
 
 .modal-text {
   background-color: white;
+  margin: 10px;
   padding: 5px 20px;
-  border-radius: 0px 0px 15px 15px;
 }
 
 .modal-title {
   font-size: 20px;
-  margin: 0;
+  margin: 0px;
 }
 
 .modal-author span{
@@ -635,6 +595,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
+  margin-bottom: 40px;
 }
 
 .modal-date-tag {
@@ -679,4 +640,15 @@ footer {
 @keyframes fadeIn {
   from { transform: scale(0.9); opacity: 0; }
   to { transform: scale(1); opacity: scale(1); }
+}
+
+/* RESPONSIVIDADE PROVISORIA */
+@media (max-width: 800px) {
+  .footer-container {
+    gap: 30px;
+  }
+
+  .footer-container .petshop-icon img {
+    margin-top: 0px;
+  }
 }

@@ -155,7 +155,7 @@ body {
 
 /* Estilização dos cards de notícias/sugestões/cuidados */
 .card-container {
-  flex: 0 0 calc((100% - 30px) / 3); /* 3 cards com gap (2 gaps de 15px = 40px) */
+  flex: 0 0 calc((100% - 30px) / 3); /* 3 cards com gap (2 gaps de 15px = 30px) */
   box-sizing: border-box;
   scroll-snap-align: start;
   background-color: #FFFFFF;

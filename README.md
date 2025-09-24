@@ -32,8 +32,12 @@ Atualmente foram desenvolvidas as páginas:
 ## 🚀 Como rodar o projeto
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/PedroHenrique/Animaliscare---FrontEnd.git
+   git clone https://github.com/PedroHenrique/Animaliscare-FrontEnd.git
 
+2. Acesse a pasta do projeto:
+   ```bash
+   cd Animaliscare-FrontEnd.git
+3. Abra o arquivo HTML no navegador ou utilize a extensão __live server__ do Visual Studio Code.
 ---
 
 # 👨‍💻 Autor
